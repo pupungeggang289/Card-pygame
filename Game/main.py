@@ -3,6 +3,8 @@ import sys
 
 import var
 
+import title
+
 def init():
     pygame.init()
     var.screen = pygame.display.set_mode(var.screen_size)
@@ -20,7 +22,8 @@ def input_handle():
             sys.exit()
 
 def loop_scene():
-    pass
+    if var.scene == 'title':
+        title.loop()
 
 init()
 main()
